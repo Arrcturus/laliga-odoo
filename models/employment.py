@@ -1,9 +1,10 @@
 from odoo import models, fields, api
 
 
-class Employment(models.Model):
+models
+class employment(models.Model):
     _name = 'league.employment'
-    _description = 'Staff employment'
+    _description = 'Employment'
 
-    name = fields.Char(string="Name", required=True)
-    min_wage = fields.Monetary('Minimun Wage')
+    name = fields.Char(String='Employment name', required=True)
+    minWage = fields.Monetary('Minimun wage')
