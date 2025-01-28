@@ -7,3 +7,5 @@ class Member(models.Model):
     _description = 'Member'
 
     id = fields.Integer('ID', required=True)
+
+    team = fields.Many2one('league.team', string="Team")

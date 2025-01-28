@@ -7,10 +7,13 @@ class Team(models.Model):
 
     name = fields.Char(string="Name", required=True)
     badge = fields.Image('Badge')
-    players_ids = fields.One2many('league.player', 'player.league', string='Players')
-    staff_ids = fields.One2many('league.staff', 'staff.league', string='Staff')
-    members = fields.One2many('league.member', 'member.league', string='Members')
+    players_ids = fields.One2many('league.player', 'team', string='Players')
+    staff_ids = fields.One2many('league.staff', 'team', string='Staff')
+    members = fields.One2many('league.member', 'team', string='Members')
     stadium_id = fields.Many2one('league.stadium', string='Stadium')
-    salary_cap = fields.Monetary('Salary Cap')
+    salary_cap = fields.Monetary('Salary Cap', required=True, currency_field='currency_id')
+    currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))
+
+    league = fields.Many2one('league.league', string="League")
 
 

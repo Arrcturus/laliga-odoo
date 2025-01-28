@@ -6,4 +6,5 @@ class Employment(models.Model):
     _description = 'Employment'
 
     name = fields.Char(String='Employment name', required=True)
-    minWage = fields.Monetary('Minimun wage')
+    min_wage = fields.Monetary('Minimun Wage', required=True, currency_field='currency_id')
+    currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))

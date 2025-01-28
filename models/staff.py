@@ -6,3 +6,5 @@ class Staff(models.Model):
     _description = 'Staff'
 
     wage = fields.Many2one('league.employment', String='Employment', required=True)
+
+    team = fields.Many2one('league.team', string="Team")
