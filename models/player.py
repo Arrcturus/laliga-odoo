@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class player(models.Model):
+class Player(models.Model):
     _name = 'league.player'
     _description = 'Player'
     _inherit = 'league.employee'

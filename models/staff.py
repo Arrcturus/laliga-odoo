@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class staff(models.Model):
+class Staff(models.Model):
     _name = 'league.staff'
     _description = 'Staff'
 

@@ -1,8 +1,7 @@
 from odoo import models, fields, api
 
 
-models
-class employment(models.Model):
+class Employment(models.Model):
     _name = 'league.employment'
     _description = 'Employment'
 
