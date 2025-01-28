@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <menuitem id="menu_league_root"
+            name="League"
+            sequence="10" />
+            
+            <menuitem id="menu_team_root"
+                name="Teams"
+                parent="menu_league_root"
+                sequence="1" />
+                
+                <menuitem id="menu_team_template"
+                    name="Teams"
+                    parent="menu_team_root"
+                    sequence="1"
+                    action="team_action_window" />
+<!--
+            <menuitem id="menu_PC_root"
+                name="PC"
+                parent="menu_league_root"
+                sequence="2" />
+
+                <menuitem id="menu_pokemon_template"
+                    name="Pokemon"
+                    parent="menu_PC_root"
+                    sequence="1"
+                    action="pokemon_action_window" />
+
+                <menuitem id="menu_trainer_template"
+                    name="Entrenador"
+                    parent="menu_PC_root"
+                    sequence="1"
+                    action="trainer_action_window" />
+
+                <menuitem id="menu_team_template"
+                    name="Equipo"
+                    parent="menu_PC_root"
+                    sequence="1"
+                    action="team_action_window" />-->
+    </data>
+</odoo>
