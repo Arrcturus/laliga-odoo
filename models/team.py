@@ -16,4 +16,5 @@ class Team(models.Model):
 
     league = fields.Many2one('league.league', string="League")
 
+#ESTO ES UNA PRUEBA
 
