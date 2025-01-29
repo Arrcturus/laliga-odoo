@@ -3,8 +3,9 @@
         <menuitem id="menu_league_root"
             name="League"
             sequence="10" />
-            
-            <!--<menuitem id="menu_team_root"
+
+
+            <menuitem id="menu_team_root"
                 name="Teams"
                 parent="menu_league_root"
                 sequence="1" />
@@ -13,7 +14,7 @@
                     name="Teams"
                     parent="menu_team_root"
                     sequence="1"
-                    action="team_action_window" />-->
+                    action="team_action_window" />
 
             <menuitem id="menu_league_league_root"
                 name="League"
@@ -25,7 +26,14 @@
                 parent="menu_league_league_root"
                 sequence="1" 
                 action="league_action_window"/>
+
 <!--
+            <menuitem id="menu_PC_root"
+                name="PC"
+                parent="menu_league_root"
+                sequence="2" />
+
+
                 <menuitem id="menu_pokemon_template"
                     name="Pokemon"
                     parent="menu_PC_root"
