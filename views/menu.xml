@@ -2,7 +2,7 @@
     <data>
         <menuitem id="menu_laliga_root"
             name="League"
-            sequence="10" />
+            sequence="1" />
 
 
             <menuitem id="menu_team_root"
