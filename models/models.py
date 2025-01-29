@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class league(models.Model):
-#     _name = 'league.league'
-#     _description = 'league.league'
+# class laliga(models.Model):
+#     _name = 'laliga.laliga'
+#     _description = 'laliga.laliga'
 
 #     name = fields.Char()
 #     value = fields.Integer()

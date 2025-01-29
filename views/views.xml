@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
 <!--
-    <record model="ir.ui.view" id="league.list">
-      <field name="name">league list</field>
-      <field name="model">league.league</field>
+    <record model="ir.ui.view" id="laliga.list">
+      <field name="name">laliga list</field>
+      <field name="model">laliga.laliga</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -17,18 +17,18 @@
 
     <!-- actions opening views on models -->
 <!--
-    <record model="ir.actions.act_window" id="league.action_window">
-      <field name="name">league window</field>
-      <field name="res_model">league.league</field>
+    <record model="ir.actions.act_window" id="laliga.action_window">
+      <field name="name">laliga window</field>
+      <field name="res_model">laliga.laliga</field>
       <field name="view_mode">tree,form</field>
     </record>
 -->
 
     <!-- server action to the one above -->
 <!--
-    <record model="ir.actions.server" id="league.action_server">
-      <field name="name">league server</field>
-      <field name="model_id" ref="model_league_league"/>
+    <record model="ir.actions.server" id="laliga.action_server">
+      <field name="name">laliga server</field>
+      <field name="model_id" ref="model_laliga_laliga"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -42,19 +42,19 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="league" id="league.menu_root"/>
+    <menuitem name="laliga" id="laliga.menu_root"/>
 -->
     <!-- menu categories -->
 <!--
-    <menuitem name="Menu 1" id="league.menu_1" parent="league.menu_root"/>
-    <menuitem name="Menu 2" id="league.menu_2" parent="league.menu_root"/>
+    <menuitem name="Menu 1" id="laliga.menu_1" parent="laliga.menu_root"/>
+    <menuitem name="Menu 2" id="laliga.menu_2" parent="laliga.menu_root"/>
 -->
     <!-- actions -->
 <!--
-    <menuitem name="List" id="league.menu_1_list" parent="league.menu_1"
-              action="league.action_window"/>
-    <menuitem name="Server to list" id="league" parent="league.menu_2"
-              action="league.action_server"/>
+    <menuitem name="List" id="laliga.menu_1_list" parent="laliga.menu_1"
+              action="laliga.action_window"/>
+    <menuitem name="Server to list" id="laliga" parent="laliga.menu_2"
+              action="laliga.action_server"/>
 -->
   </data>
 </odoo>

@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class Stats(models.Model):
-    _name = 'league.stats'
+    _name = 'laliga.stats'
     _description = 'Player stats'
 
     minutes = fields.Integer('Minutes', default=0)

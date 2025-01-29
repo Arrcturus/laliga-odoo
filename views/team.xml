@@ -1,8 +1,8 @@
 <odoo>
   <data>
     <record id="team_tree" model="ir.ui.view">
-      <field name="name">league.team.tree</field>
-      <field name="model">league.team</field>
+      <field name="name">laliga.team.tree</field>
+      <field name="model">laliga.team</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name" />
@@ -53,7 +53,7 @@
 -->
     <record model="ir.actions.act_window" id="team_action_window">
       <field name="name">team</field>
-      <field name="res_model">league.team</field>
+      <field name="res_model">laliga.team</field>
       <field name="view_mode">tree</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
