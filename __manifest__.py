@@ -27,6 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/menu.xml',
+        'views/league.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
