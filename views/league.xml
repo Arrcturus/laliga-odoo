@@ -1,8 +1,8 @@
 <odoo>
-    <data>mi_modelo
+    <data>league
       <record id="laliga-odoo_league_tree" model="ir.ui.view">
         <field name="name">laliga-odoo.league.tree</field>
-        <field name="model">laliga-odoo.league</field>
+        <field name="model">league.league</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -13,7 +13,7 @@
 
       <record id="laliga-odoo_league_form" model="ir.ui.view">
         <field name="name">laliga-odoo.league.form</field>
-        <field name="model">laliga-odoo.league</field>
+        <field name="model">league.league</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -29,6 +29,21 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+      </record>
+
+
+      <record model="ir.actions.act_window" id="league_action_window">
+        <field name="name">league</field>
+        <field name="res_model">league.league</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                League
+            </p>
+            <p>
+                Click 'Crear' para añadir nuevos elementos.
+            </p>
         </field>
       </record>
     </data>
