@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class Transfer(models.Model):
-    _name = 'league.transfer'
+    _name = 'laliga.transfer'
     _description = 'Player transfers'
 
     type = fields.Selection([
@@ -14,6 +14,6 @@ class Transfer(models.Model):
     transfer_amount = fields.Monetary('Transfer amount', required=True, currency_field='currency_id')
     wage = fields.Monetary('Wage', required=True, currency_field='currency_id')
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))
-    team_from_id = fields.Many2one('league.team', string='Team From')
-    team_to_id = fields.Many2one('league.team', string='Team To')
+    team_from_id = fields.Many2one('laliga.team', string='Team From')
+    team_to_id = fields.Many2one('laliga.team', string='Team To')
     date = fields.Date('Date')

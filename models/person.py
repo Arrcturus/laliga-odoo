@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class Person(models.Model):
-    _name = 'league.person'
+    _name = 'laliga.person'
     _description = 'Person'
 
     name = fields.Char(String="Name", required=True)

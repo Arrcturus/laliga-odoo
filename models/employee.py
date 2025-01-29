@@ -2,9 +2,9 @@ from odoo import models, fields, api
 
 
 class Employee(models.Model):
-    _name = 'league.employee'
+    _name = 'laliga.employee'
     _description = 'Employee'
-    _inherit = 'league.person'
+    _inherit = 'laliga.person'
 
     wage = fields.Monetary('Wage', required=True, currency_field='currency_id')
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))

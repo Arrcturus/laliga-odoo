@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class Stadium(models.Model):
-    _name = 'league.stadium'
+    _name = 'laliga.stadium'
     _description = 'Team'
 
     name = fields.Char(string="Name", required=True)

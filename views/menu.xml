@@ -1,13 +1,13 @@
 <odoo>
     <data>
-        <menuitem id="menu_league_root"
+        <menuitem id="menu_laliga_root"
             name="League"
             sequence="10" />
 
 
             <menuitem id="menu_team_root"
                 name="Teams"
-                parent="menu_league_root"
+                parent="menu_laliga_root"
                 sequence="1" />
                 
                 <menuitem id="menu_team_template"
@@ -16,14 +16,14 @@
                     sequence="1"
                     action="team_action_window" />
 
-            <menuitem id="menu_league_league_root"
+            <menuitem id="menu_league_root"
                 name="League"
                 parent="menu_league_root"
                 sequence="1" />
 
                 <menuitem id="menu_league_template"
                 name="League"
-                parent="menu_league_league_root"
+                parent="menu_league_root"
                 sequence="1" 
                 action="league_action_window"/>
 

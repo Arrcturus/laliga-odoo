@@ -2,13 +2,13 @@ from odoo import models, fields, api
 
 
 class Injury(models.Model):
-    _name = 'league.injury'
+    _name = 'laliga.injury'
     _description = 'Player injury history'
 
     description = fields.Char(string="Description", required=True)
     aprox_duration = fields.Integer(string="Aprox. duration (days)", required=True)
     injury_number = fields.Integer(string="The number of the injury", readonly=True)
-    jugador_id = fields.Many2one('league.jugador', string="Related player", ondelete='cascade')
+    jugador_id = fields.Many2one('laliga.jugador', string="Related player", ondelete='cascade')
 
     @api.model
     def create(self, vals):
