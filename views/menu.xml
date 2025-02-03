@@ -16,6 +16,30 @@
                     sequence="1"
                     action="team_action_window" />
 
+                <menuitem id="menu_stadium_template"
+                    parent="menu_team_root"
+                    name="Stadiums"
+                    sequence="2"
+                    action="stadium_action_window"/>
+
+                <menuitem id="menu_member_template"
+                    parent="menu_team_root"
+                    name="Members"
+                    sequence="3"
+                    action="member_action_window"/>
+
+                <menuitem id="menu_staff_template"
+                    parent="menu_team_root"
+                    name="Staff"
+                    sequence="4"
+                    action="staff_action_window"/>
+
+                <menuitem id="menu_employment_template"
+                    parent="menu_team_root"
+                    name="Employment"
+                    sequence="5"
+                    action="employment_action_window"/>
+
             <menuitem id="menu_league_root"
                 name="League"
                 parent="menu_laliga_root"

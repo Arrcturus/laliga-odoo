@@ -30,6 +30,10 @@
         'views/templates.xml',
         'views/league.xml',
         'views/team.xml',
+        'views/stadium.xml',
+        'views/member.xml',
+        'views/staff.xml',
+        'views/employment.xml',
         'views/menu.xml',
         # EL MENÚ SIEMPRE VA ABAJO DEL TODO
 
