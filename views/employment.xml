@@ -1,0 +1,47 @@
+<odoo>record
+    <data>
+      <record id="laliga_employment_tree" model="ir.ui.view">
+        <field name="name">laliga.employment.tree</field>
+        <field name="model">laliga.employment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+      </record>
+
+      <record id="laliga_employment_form" model="ir.ui.view">
+        <field name="name">laliga.employment.form</field>
+        <field name="model">laliga.employment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left" string="Grupo Izquierda">
+                            <field name="name"/>
+                            <field name="min_wage"/>
+                            <field name="currency_id"/>
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="employment_action_window">
+          <field name="name">employment</field>
+          <field name="res_model">laliga.employment</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                  Mi modelo
+              </p>
+              <p>
+                  Click 'Crear' para añadir nuevos elementos.
+              </p>
+          </field>
+      </record>
+    </data>
+</odoo>

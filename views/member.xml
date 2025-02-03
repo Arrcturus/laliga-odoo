@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+      <record id="laliga_member_tree" model="ir.ui.view">
+        <field name="name">laliga.member.tree</field>
+        <field name="model">laliga.member</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="id"/>
+            </tree>
+        </field>
+      </record>
+
+      <record id="laliga_member_form" model="ir.ui.view">
+        <field name="name">laliga.member.form</field>
+        <field name="model">laliga.member</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                  <group name="group_top">
+                      <group name="group_left" string="Grupo Izquierda">
+                          <field name="name"/>
+                          <field name="id"/>
+                          <field name="dni" />
+                          <field name="birthDate" />
+                          <field name="nationality" />
+                      </group>
+                      <group name="group_right">
+                      </group>
+                  </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="member_action_window">
+        <field name="name">member</field>
+        <field name="res_model">laliga.member</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                member
+            </p>
+            <p>
+                Click 'Crear' para añadir nuevos elementos.
+            </p>
+        </field>
+      </record>
+    </data>
+</odoo>
