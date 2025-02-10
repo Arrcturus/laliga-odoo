@@ -67,7 +67,7 @@
         <mxCell id="boJKv7_bDXSt-H2jWi81-18" value="Employment" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="850" y="1029" width="140" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="boJKv7_bDXSt-H2jWi81-19" value="+ nombre: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="boJKv7_bDXSt-H2jWi81-18" vertex="1">
+        <mxCell id="boJKv7_bDXSt-H2jWi81-19" value="+ name: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="boJKv7_bDXSt-H2jWi81-18" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="boJKv7_bDXSt-H2jWi81-20" value="+ minWage: Monetary" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="boJKv7_bDXSt-H2jWi81-18" vertex="1">
