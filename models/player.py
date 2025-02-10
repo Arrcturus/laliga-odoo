@@ -11,7 +11,7 @@ class Player(models.Model):
         ('1', 'Goalkeeper'),
         ('2', 'Defender'),
         ('3', 'Midfielder'),
-        ('4', 'Attacker')
+        ('4', 'Attacker yatusae')
     ], string='Position', default = '1')
     height = fields.Integer(string='Height (cm)', required=True)
     weight = fields.Integer(string='Weight (kg)', required=True)
