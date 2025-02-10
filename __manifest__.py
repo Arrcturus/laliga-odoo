@@ -32,6 +32,7 @@
         'views/team.xml',
         'views/stadium.xml',
         'views/member.xml',
+        'views/contract.xml',
         'views/staff.xml',
         'views/transfer.xml',
         'views/injury.xml',

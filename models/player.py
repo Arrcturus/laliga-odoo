@@ -19,6 +19,7 @@ class Player(models.Model):
     medicalRecord = fields.Many2many(string='Medical record', comodel_name='laliga.injury')
     transfers = fields.Many2many(string='Transfer record', comodel_name='laliga.transfer')
     stats = fields.Many2one(comodel_name='laliga.stats', string='Stats', required=True)
+    contract = fields.One2many('laliga.contract', 'player_id', string="Contract")
     min_wage = fields.Monetary('Minimun Wage', required=True, currency_field='currency_id')
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))
 

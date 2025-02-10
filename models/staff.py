@@ -6,6 +6,5 @@ class Staff(models.Model):
     _description = 'Staff'
     _inherit = 'laliga.employee'
 
-    wage = fields.Many2one('laliga.employment', String='Employment', required=True)
-
     team = fields.Many2one('laliga.team', string="Team")
+    contract = fields.One2many('laliga.contract', 'staff_id', string='Contract')
