@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <record id="laliga_transfer_tree" model="ir.ui.view">
+      <field name="name">laliga.transfer.tree</field>
+      <field name="model">laliga.transfer</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="player_id" />
+              <field name="type"/>
+              <field name="duration" />
+              <field name="transfer_amount" />
+              <field name="wage" />
+              <field name="team_from_id" />
+              <field name="team_to_id" />
+              <field name="date" />
+          </tree>
+      </field>
+    </record>
+
+    <record id="laliga_transfer_form" model="ir.ui.view">
+        <field name="name">laliga.transfer.form</field>
+        <field name="model">laliga.transfer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left" string="Grupo Izquierda">
+                            <field name="player_id" />
+                            <field name="type"/>
+                            <field name="duration" />
+                            <field name="transfer_amount" />
+                            <field name="wage" />
+                            <field name="team_from_id" />
+                            <field name="team_to_id" />
+                            <field name="date" />
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="transfer_action_window">
+        <field name="name">transfer</field>
+        <field name="res_model">laliga.transfer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Mi modelo
+            </p>
+            <p>
+                Click 'Crear' para añadir nuevos elementos.
+            </p>
+        </field>
+    </record>
+  </data>
+</odoo>

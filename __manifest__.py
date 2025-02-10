@@ -33,6 +33,10 @@
         'views/stadium.xml',
         'views/member.xml',
         'views/staff.xml',
+        'views/transfer.xml',
+        'views/injury.xml',
+        'views/stats.xml',
+        'views/player.xml',
         'views/employment.xml',
         'views/menu.xml',
         # EL MENÚ SIEMPRE VA ABAJO DEL TODO

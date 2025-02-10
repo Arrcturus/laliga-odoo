@@ -34,11 +34,29 @@
                     sequence="4"
                     action="staff_action_window"/>
 
-                <menuitem id="menu_employment_template"
+                    <menuitem id="menu_transfer_template"
                     parent="menu_team_root"
-                    name="Employment"
-                    sequence="5"
-                    action="employment_action_window"/>
+                    name="Tranfers"
+                    sequence="4"
+                    action="transfer_action_window"/>
+
+                    <menuitem id="menu_injury_template"
+                    parent="menu_team_root"
+                    name="Injuries"
+                    sequence="4"
+                    action="injury_action_window"/>
+
+                    <menuitem id="menu_stats_template"
+                    parent="menu_team_root"
+                    name="Stats"
+                    sequence="4"
+                    action="stats_action_window"/>
+
+                    <menuitem id="menu_player_template"
+                    parent="menu_team_root"
+                    name="Players"
+                    sequence="4"
+                    action="player_action_window"/>
 
             <menuitem id="menu_league_root"
                 name="League"

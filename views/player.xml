@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+    <record id="laliga_player_tree" model="ir.ui.view">
+      <field name="name">laliga.player.tree</field>
+      <field name="model">laliga.player</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+              <field name="position" />
+              <field name="value" />
+              <field name="wage" />
+              <field name="team" />
+          </tree>
+      </field>
+    </record>
+
+    <record id="laliga_player_form" model="ir.ui.view">
+        <field name="name">laliga.player.form</field>
+        <field name="model">laliga.player</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left" string="Grupo Izquierda">
+                            <field name="name"/>
+                            <field name="dni"/>
+                            <field name="birthDate"/>
+                            <field name="nationality"/>
+                            <field name="wage"/>
+                            <field name="contractStart"/>
+                            <field name="contractEnd"/>
+                            <field name="team"/>
+                            <field name="position" />
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="player_action_window">
+        <field name="name">player</field>
+        <field name="res_model">laliga.player</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Mi modelo
+            </p>
+            <p>
+                Click 'Crear' para añadir nuevos elementos.
+            </p>
+        </field>
+    </record>
+  </data>
+</odoo>
