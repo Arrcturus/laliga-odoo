@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+    <record id="laliga_injury_tree" model="ir.ui.view">
+      <field name="name">laliga.injury.tree</field>
+      <field name="model">laliga.injury</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="aprox_duration"/>
+              <field name="injury_number" />
+              <field name="player_id" />
+          </tree>
+      </field>
+    </record>
+
+    <record id="laliga_injury_form" model="ir.ui.view">
+        <field name="name">laliga.injury.form</field>
+        <field name="model">laliga.injury</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left" string="Grupo Izquierda">
+                            <field name="aprox_duration"/>
+                            <field name="injury_number" />
+                            <field name="player_id" />
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="injury_action_window">
+        <field name="name">injury</field>
+        <field name="res_model">laliga.injury</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Mi modelo
+            </p>
+            <p>
+                Click 'Crear' para añadir nuevos elementos.
+            </p>
+        </field>
+    </record>
+  </data>
+</odoo>

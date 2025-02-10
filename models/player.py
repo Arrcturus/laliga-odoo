@@ -7,7 +7,12 @@ class Player(models.Model):
     _inherit = 'laliga.employee'
 
     jerseyNum = fields.Integer(string='Jersey Number', required=True)
-    position = fields.Many2one(comodel_name='laliga.position', string='Position', required=True)
+    position = fields.Selection([
+        ('1', 'Goalkeeper'),
+        ('2', 'Defender'),
+        ('3', 'Midfielder'),
+        ('4', 'Attacker')
+    ], string='Position', default = '1')
     height = fields.Integer(string='Height (cm)', required=True)
     weight = fields.Integer(string='Weight (kg)', required=True)
     value = fields.Float(string='Player value', required=True)

@@ -5,6 +5,7 @@ class Transfer(models.Model):
     _name = 'laliga.transfer'
     _description = 'Player transfers'
 
+    player_id = fields.Many2one('laliga.player', string='Player')
     type = fields.Selection([
         ('1', 'Traspaso'),
         ('2', 'Cesión'),
