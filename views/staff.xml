@@ -22,10 +22,7 @@
                             <field name="dni"/>
                             <field name="birthDate"/>
                             <field name="nationality"/>
-                            <field name="wage"/>
-                            <field name="currency_id"/>
-                            <field name="contractStart"/>
-                            <field name="contractEnd"/>
+                            <field name="contract"/>
                             <field name="team"/>
                         </group>
                         <group name="group_right">

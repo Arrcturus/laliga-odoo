@@ -8,7 +8,6 @@
               <field name="name"/>
               <field name="position" />
               <field name="value" />
-              <field name="wage" />
               <field name="team" />
           </tree>
       </field>
@@ -26,9 +25,13 @@
                             <field name="dni"/>
                             <field name="birthDate"/>
                             <field name="nationality"/>
-                            <field name="wage"/>
-                            <field name="contractStart"/>
-                            <field name="contractEnd"/>
+                            <field name="contract">
+                                <tree editable="bottom">
+                                    <field name="wage" />
+                                    <field name="start" />
+                                    <field name="end" />
+                                </tree>
+                            </field>
                             <field name="team"/>
                             <field name="position" />
                         </group>
