@@ -1,6 +1,18 @@
 <odoo>
   <data>
 
+  <record id="laliga_contract_tree" model="ir.ui.view">
+      <field name="name">laliga.contract.tree</field>
+      <field name="model">laliga.contract</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="wage"/>
+              <field name="start" />
+              <field name="end" />
+          </tree>
+      </field>
+    </record>
+
     <record id="laliga_contract_form" model="ir.ui.view">
         <field name="name">laliga.contract.form</field>
         <field name="model">laliga.contract</field>

@@ -23,15 +23,16 @@
                         <group name="group_left" string="Grupo Izquierda">
                             <field name="name"/>
                             <field name="dni"/>
+                            <field name="jerseyNum"/>
+                            <field name="height" />
+                            <field name="weight" />
                             <field name="birthDate"/>
                             <field name="nationality"/>
-                            <field name="contract">
-                                <tree editable="bottom">
-                                    <field name="wage" />
-                                    <field name="start" />
-                                    <field name="end" />
-                                </tree>
-                            </field>
+                            <field name="value" />
+                            <field name="contract"/>
+                            <field name="wage"/>
+                            <field name="start"/>
+                            <field name="end"/>
                             <field name="team"/>
                             <field name="position" />
                         </group>
