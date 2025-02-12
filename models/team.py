@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-
+from odoo.exceptions import ValidationError
 
 class Team(models.Model):
     _name = 'laliga.team'
@@ -16,4 +16,10 @@ class Team(models.Model):
 
     league = fields.Many2one('laliga.league', string="League")
 
-
+    @api.constrains('name')
+    def _check_unique_name(self):
+        for t in self:
+            if t.name:
+                duplicate_cs = self.search([('id', '!=', t.id), ('name', '=', t.name)])
+            if duplicate_cs:
+                raise ValidationError("El nombre está asignado a otro equipo")

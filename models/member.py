@@ -6,6 +6,4 @@ class Member(models.Model):
     _inherit = "laliga.person"
     _description = 'Member'
 
-    id = fields.Integer('ID', required=True)
-
     team = fields.Many2one('laliga.team', string="Team")
