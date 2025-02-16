@@ -38,6 +38,7 @@
         'views/injury.xml',
         'views/stats.xml',
         'views/player.xml',
+        'views/observations.xml',
         'views/employment.xml',
         'views/menu.xml',
         # EL MENÚ SIEMPRE VA ABAJO DEL TODO

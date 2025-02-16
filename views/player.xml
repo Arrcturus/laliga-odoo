@@ -44,10 +44,32 @@
         </field>
     </record>
 
+    <record id="player_kanban" model="ir.ui.view">
+        <field name="name">laliga.player.kanban</field>
+        <field name="model">laliga.player</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <div class="oe_kanban_global_click">
+                                <strong><field name="name"/></strong>
+                                <div>Position: <field name="position"/></div>
+                                <div>Team: <field name="team"/></div>
+                                <div>Value: <field name="value" widget="monetary"/> €</div>
+                                <div>Wage: <field name="wage" widget="monetary"/> € monthly</div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
     <record model="ir.actions.act_window" id="player_action_window">
         <field name="name">player</field>
         <field name="res_model">laliga.player</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Mi modelo
