@@ -28,10 +28,31 @@
         </field>
       </record>
 
+      <record id="stadium_kanban" model="ir.ui.view">
+          <field name="name">laliga.stadium.kanban</field>
+          <field name="model">laliga.stadium</field>
+          <field name="arch" type="xml">
+              <kanban>
+                  <templates>
+                      <t t-name="kanban-box">
+                          <div class="oe_kanban_card">
+                              <div class="oe_kanban_global_click">
+                                  <strong><field name="name"/></strong>
+                                  <div>Capacity: <field name="capacity"/></div>
+                                  <div>Date of contruction: <field name="construction_date"/></div>
+                                  <div>City: <field name="city"/></div>
+                              </div>
+                          </div>
+                      </t>
+                  </templates>
+              </kanban>
+          </field>
+      </record>
+
       <record model="ir.actions.act_window" id="stadium_action_window">
       <field name="name">stadium</field>
       <field name="res_model">laliga.stadium</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
           stadium
