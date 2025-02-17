@@ -20,7 +20,7 @@
             <form>
                 <sheet>
                     <group name="group_top">
-                        <group name="group_left" string="Grupo Izquierda">
+                        <group name="group_left" string="Personal data">
                             <field name="name"/>
                             <field name="dni"/>
                             <field name="jerseyNum"/>
@@ -28,17 +28,48 @@
                             <field name="weight" />
                             <field name="birthDate"/>
                             <field name="nationality"/>
+                        </group>
+                        <group name="group_right" string="Football info">
                             <field name="value" />
-                            <field name="contract"/>
-                            <field name="wage"/>
-                            <field name="start"/>
-                            <field name="end"/>
                             <field name="team"/>
                             <field name="position" />
                         </group>
-                        <group name="group_right">
-                        </group>
                     </group>
+                    <notebook>
+                        <page name="contract" string="Contract">
+                            <div>
+                                Contract: 
+                                <field name="contract"/><br/>
+                                Wage: 
+                                <field name="wage"/><br/>
+                                Start: 
+                                <field name="start"/><br/>
+                                End: 
+                                <field name="end"/>
+                            </div>
+                        </page>
+                        <page name="injuries" string="Injuries">
+                            <div>
+                                <field name="injury" />
+                            </div>
+                        </page>
+                        <page name="stats" string="Stats">
+                            <div>
+                                Stats: 
+                                <field name="stats" /><br/>
+                                Minutes: 
+                                <field name="minutes" /><br/>
+                                Goals: 
+                                <field name="goals" /><br/>
+                                Assists: 
+                                <field name="assists" /><br/>
+                                Played matches: 
+                                <field name="played_matches" /><br/>
+                                Sanctions: 
+                                <field name="sanctions" />
+                            </div>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

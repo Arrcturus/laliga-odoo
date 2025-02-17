@@ -12,12 +12,8 @@ class Injury(models.Model):
 
     @api.model
     def create(self, vals):
-        # Obtener el player asociado
         player_id = vals.get('player_id')
         if player_id:
-            # Contar las lesiones existentes del player
             existing_injuries = self.search_count([('player_id', '=', player_id)])
-            # Asignar el número consecutivo de la lesión
             vals['injury_number'] = existing_injuries + 1
-        # Crear el registro de la lesión
         return super(Injury, self).create(vals)

@@ -21,6 +21,7 @@
                     <group name="group_top">
                         <group name="group_left" string="Grupo Izquierda">
                             <field name="aprox_duration"/>
+                            <field name="description" />
                             <field name="injury_number" />
                             <field name="player_id" />
                         </group>

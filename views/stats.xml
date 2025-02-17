@@ -23,7 +23,6 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left" string="Grupo Izquierda">
-                            <field name="player_id" />
                             <field name="minutes"/>
                             <field name="goals" />
                             <field name="assists" />
