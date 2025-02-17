@@ -17,7 +17,7 @@
         <form string="">
           <sheet>
           <div class="oe_avatar">
-            <field name="badge" />
+            <field name="badge" widget="image" />
           </div>
           <div class="oe_title mb32">
             <field name="name" />
@@ -38,47 +38,6 @@
       </field>
     </record>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="league.action_window">
-      <field name="name">league window</field>
-      <field name="res_model">league.league</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="league.action_server">
-      <field name="name">league server</field>
-      <field name="model_id" ref="model_league_league"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="league" id="league.menu_root"/>
--->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="league.menu_1" parent="league.menu_root"/>
-    <menuitem name="Menu 2" id="league.menu_2" parent="league.menu_root"/>
--->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="league.menu_1_list" parent="league.menu_1"
-              action="league.action_window"/>
-    <menuitem name="Server to list" id="league" parent="league.menu_2"
-              action="league.action_server"/>
--->
     <record model="ir.actions.act_window" id="team_action_window">
       <field name="name">team</field>
       <field name="res_model">laliga.team</field>
