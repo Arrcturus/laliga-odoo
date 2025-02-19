@@ -18,7 +18,7 @@
             <form>
                 <sheet>
                   <group name="group_top">
-                      <group name="group_left" string="Grupo Izquierda">
+                      <group name="group_left" string="Member data">
                           <field name="name"/>
                           <field name="id"/>
                           <field name="dni" />
