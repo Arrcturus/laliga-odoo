@@ -16,29 +16,53 @@
       <field name="name">laliga.team.form</field>
       <field name="model">laliga.team</field>
       <field name="arch" type="xml">
-        <form string="">
+        <form string="Team">
           <sheet>
-          <div class="oe_title mb32">
-            <h1>
-              <field name="name" />
-            </h1>
-          </div>
-          <div class="oe_avatar">
-            <field name="badge" widget="image" />
-          </div>
+            <div class="oe_title mb32">
+              <h1>
+                <field name="name" />
+              </h1>
+            </div>
+            <div class="oe_avatar">
+              <field name="badge" widget="image" />
+            </div>
             <group name="group_top">
               <group name="group_left">
-                <field name="players_ids" />
-                <field name="staff_ids" />
-                <field name="members" />
-              </group>
-              <group name="group_right">
                 <field name="salary_cap" />
-                <group name="group_bottom">
-                  <field name="stadium_id" />
-                </group>
+                <field name="stadium_id" />
+                <field name="league"/>
               </group>
             </group>
+            <notebook>
+              <page string="Players">
+                <field name="players_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="position"/>
+                    <field name="value"/>
+                    <field name="wage" />
+                  </tree>
+                </field>
+              </page>
+              <page string="Staff">
+                <field name="staff_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="employment_id"/>
+                    <field name="wage"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Members">
+                <field name="members">
+                  <tree>
+                    <field name="name"/>
+                    <field name="dni"/>
+                    <field name="birthDate"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
@@ -57,14 +81,14 @@
                                 <field name="badge" widget="image" class="img-circle"/>
                               </div>
                               <div style="overflow: hidden; float: left;">
-                                <strong class="oe_kanban_title"> <field name="name"/> </strong>
-                                <div class="oe_kanban_content">
-                                  <div><strong>Players:</strong> <field name="players_ids" /></div>
-                                  <div><strong>Staff:</strong> <field name="staff_ids" /></div>
-                                  <div><strong>Members:</strong> <field name="members" /></div>
-                                  <div><strong>Salary Cap:</strong> <field name="salary_cap" /></div>
-                                  <div><strong>Stadium:</strong> <field name="stadium_id" /></div>
-                                </div>
+                                  <strong class="oe_kanban_title"> <field name="name"/> </strong>
+                                  <div class="oe_kanban_content">
+                                      <div><strong>Players:</strong> <field name="players_ids" /></div>
+                                      <div><strong>Staff:</strong> <field name="staff_ids" /></div>
+                                      <div><strong>Members:</strong> <field name="members" /></div>
+                                      <div><strong>Salary Cap:</strong> <field name="salary_cap" /></div>
+                                      <div><strong>Stadium:</strong> <field name="stadium_id" /></div>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -72,7 +96,7 @@
               </templates>
           </kanban>
       </field>
-  </record>
+    </record>
 
     <record model="ir.actions.act_window" id="team_action_window">
       <field name="name">team</field>

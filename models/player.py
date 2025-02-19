@@ -28,7 +28,7 @@ class Player(models.Model):
 
     goal_contributions_per_match = fields.Float(string='Goal Contributions per Match', compute='_compute_goal_contributions_per_match')
 
-    contract = fields.Many2one('laliga.contract')
+    contract = fields.Many2one('laliga.contract', string='Contract')
     wage = fields.Monetary(related="contract.wage", string="Wage")
     start = fields.Date(related="contract.start")
     end = fields.Date(related="contract.end")
