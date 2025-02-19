@@ -10,6 +10,7 @@ class Staff(models.Model):
     employment_id = fields.Many2one('laliga.employment', string='Employment', required=True)
     team = fields.Many2one('laliga.team', string="Team")
     contract = fields.Many2one('laliga.contract', string='Contract')
+    currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))
     wage = fields.Monetary(related="contract.wage", string="Wage")
     start = fields.Date(related="contract.start")
     end = fields.Date(related="contract.end")
