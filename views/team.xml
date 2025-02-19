@@ -20,7 +20,7 @@
           <sheet>
             <div class="oe_title mb32">
               <h1>
-                <field name="name" />
+                <field name="name" placeholder="Team's name"/>
               </h1>
             </div>
             <div class="oe_avatar">
