@@ -23,13 +23,13 @@ class Person(models.Model):
                 continue
 
             if not re.match(dni_regex, record.dni):
-                raise ValidationError("El DNI debe tener 8 números seguidos de una letra mayúscula.")
+                raise ValidationError("The DNI must have 8 digits followed by an uppercase letter.")
 
             numero = int(record.dni[:-1])
             letra = record.dni[-1]
 
             if letra != letras_dni[numero % 23]:
-                raise ValidationError("El DNI no es válido, la letra no coincide.")
+                raise ValidationError("The DNI is not valid.")
 
     @api.constrains('dni')
     def _check_unique_dni(self):
@@ -37,4 +37,4 @@ class Person(models.Model):
             if d.dni:
                 duplicate_ds = self.search([('id', '!=', d.id), ('dni', '=', d.dni)])
             if duplicate_ds:
-                raise ValidationError("El DNI debe ser único.")
+                raise ValidationError("The DNI must be unique")
