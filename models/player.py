@@ -16,7 +16,6 @@ class Player(models.Model):
     height = fields.Integer(string='Height (cm)', required=True)
     weight = fields.Integer(string='Weight (kg)', required=True)
     value = fields.Float(string='Player value', required=True)
-    medicalRecord = fields.Many2many(string='Medical record', comodel_name='laliga.injury')
     transfers = fields.Many2many(string='Transfer record', comodel_name='laliga.transfer')
     
     stats = fields.Many2one('laliga.stats')
