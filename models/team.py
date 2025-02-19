@@ -30,10 +30,9 @@ class Team(models.Model):
             if len(team.players_ids) > 24:
                 raise ValidationError("The maximum number of players is 24.")
 
-    @api.constrains('salary_cap')
+    @api.constrains('salary_cap', 'players_ids')
     def _check_salary_cap_not_surpassed(self):
-        sum = 0
-        for p in self.players_ids:
-            sum += p.wage
-        if sum > self.salary_cap:
-            raise ValidationError("The salary cap is exceeded.")
+        for team in self:
+            total_salary = sum(player.wage for player in team.players_ids)
+            if total_salary > team.salary_cap:
+                raise ValidationError("The total salary of the players exceeds the salary cap.")

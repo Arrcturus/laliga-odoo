@@ -6,6 +6,9 @@
       <field name="arch" type="xml">
           <tree>
               <field name="name"/>
+              <field name="dni"/>
+              <field name="team"/>
+              <field name="employment_id"/>
           </tree>
       </field>
     </record>
@@ -17,17 +20,34 @@
             <form>
                 <sheet>
                     <group name="group_top">
-                        <group name="group_left" string="Grupo Izquierda">
+                        <group name="group_left" string="Staff Details">
                             <field name="name"/>
                             <field name="dni"/>
                             <field name="birthDate"/>
                             <field name="nationality"/>
-                            <field name="contract"/>
+                            <field name="employment_id"/>
                             <field name="team"/>
                         </group>
-                        <group name="group_right">
+                        <group name="group_right" string="Contact Information">
+                            <field name="phone" widget="phone"/>
+                            <field name="email" widget="email"/>
+                            <field name="address"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page name="contract" string="Contract">
+                            <div>
+                                Contract: 
+                                <field name="contract"/><br/>
+                                Wage: 
+                                <field name="wage"/><br/>
+                                Start: 
+                                <field name="start"/><br/>
+                                End: 
+                                <field name="end"/>
+                            </div>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
