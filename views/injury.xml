@@ -19,7 +19,7 @@
             <form>
                 <sheet>
                     <group name="group_top">
-                        <group name="group_left" string="Grupo Izquierda">
+                        <group name="group_left" string="Injury info">
                             <field name="aprox_duration"/>
                             <field name="description" />
                             <field name="injury_number" />
