@@ -20,7 +20,6 @@
                         <group name="group_left" string="Employment info">
                             <field name="name"/>
                             <field name="min_wage"/>
-                            <field name="currency_id"/>
                         </group>
                         <group name="group_right">
                         </group>

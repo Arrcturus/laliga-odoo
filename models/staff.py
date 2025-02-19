@@ -6,12 +6,8 @@ class Staff(models.Model):
     _name = 'laliga.staff'
     _description = 'Staff'
     _inherit = 'laliga.person'
-
-    name = fields.Char(string="Name", required=True)
-    team_id = fields.Many2one('laliga.team', string='Team')
+    
     employment_id = fields.Many2one('laliga.employment', string='Employment', required=True)
-    currency_id = fields.Many2one('res.currency', default=lambda self: self.env.ref('base.EUR'))
-
     team = fields.Many2one('laliga.team', string="Team")
     contract = fields.Many2one('laliga.contract', string='Contract')
     wage = fields.Monetary(related="contract.wage", string="Wage")
