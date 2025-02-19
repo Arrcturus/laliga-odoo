@@ -6,11 +6,11 @@
       <field name="arch" type="xml">
           <tree>
               <field name="player_id" />
-              <field name="type"/>
+              <field name="transfer_type"/>
               <field name="transfer_amount" />
-              <field name="contract" />
               <field name="team_from_id" />
               <field name="team_to_id" />
+              <field name="date" />
           </tree>
       </field>
     </record>
@@ -22,13 +22,14 @@
             <form>
                 <sheet>
                     <group name="group_top">
-                        <group name="group_left" string="Grupo Izquierda">
+                        <group name="group_left" string="Transfer Details">
                             <field name="player_id" />
-                            <field name="type"/>
+                            <field name="transfer_type"/>
                             <field name="transfer_amount" />
                             <field name="contract" />
-                            <field name="team_from_id" />
+                            <field name="team_from_id"/>
                             <field name="team_to_id" />
+                            <field name="date" />
                         </group>
                         <group name="group_right">
                         </group>

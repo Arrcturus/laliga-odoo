@@ -6,6 +6,8 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name" />
+          <field name="salary_cap" />
+          <field name="stadium_id" />
         </tree>
       </field>
     </record>
@@ -16,11 +18,13 @@
       <field name="arch" type="xml">
         <form string="">
           <sheet>
+          <div class="oe_title mb32">
+            <h1>
+              <field name="name" />
+            </h1>
+          </div>
           <div class="oe_avatar">
             <field name="badge" widget="image" />
-          </div>
-          <div class="oe_title mb32">
-            <field name="name" />
           </div>
             <group name="group_top">
               <group name="group_left">
@@ -29,8 +33,10 @@
                 <field name="members" />
               </group>
               <group name="group_right">
-                <field name="stadium_id" />
                 <field name="salary_cap" />
+                <group name="group_bottom">
+                  <field name="stadium_id" />
+                </group>
               </group>
             </group>
           </sheet>
@@ -38,10 +44,40 @@
       </field>
     </record>
 
+    <record id="team_kanban" model="ir.ui.view">
+      <field name="name">laliga.team.kanban</field>
+      <field name="model">laliga.team</field>
+      <field name="arch" type="xml">
+          <kanban>
+              <templates>
+                  <t t-name="kanban-box">
+                      <div class="oe_kanban_card">
+                          <div class="oe_kanban_global_click">
+                              <div style="float: right; margin-right: 10px; width: 50px; height: 50px;">
+                                <field name="badge" widget="image" class="img-circle"/>
+                              </div>
+                              <div style="overflow: hidden; float: left;">
+                                <strong class="oe_kanban_title"> <field name="name"/> </strong>
+                                <div class="oe_kanban_content">
+                                  <div><strong>Players:</strong> <field name="players_ids" /></div>
+                                  <div><strong>Staff:</strong> <field name="staff_ids" /></div>
+                                  <div><strong>Members:</strong> <field name="members" /></div>
+                                  <div><strong>Salary Cap:</strong> <field name="salary_cap" /></div>
+                                  <div><strong>Stadium:</strong> <field name="stadium_id" /></div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </t>
+              </templates>
+          </kanban>
+      </field>
+  </record>
+
     <record model="ir.actions.act_window" id="team_action_window">
       <field name="name">team</field>
       <field name="res_model">laliga.team</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
           Team
