@@ -22,15 +22,13 @@ class Team(models.Model):
             if t.name:
                 duplicate_cs = self.search([('id', '!=', t.id), ('name', '=', t.name)])
             if duplicate_cs:
-                raise ValidationError("El nombre está asignado a otro equipo")
+                raise ValidationError("The name is already assigned to another team.")
 
-    """
-    @api.constrains('players_id')
+    @api.constrains('players_ids')
     def _check_players_limit(self):
-        # Verifica el número de jugadores
-        if len(self.players_ids) > 24:
-            raise ValidationError("El número máximo de jugadores es 24.")
-    """
+        for team in self:
+            if len(team.players_ids) > 24:
+                raise ValidationError("The maximum number of players is 24.")
 
     @api.constrains('salary_cap')
     def _check_salary_cap_not_surpassed(self):
@@ -38,4 +36,4 @@ class Team(models.Model):
         for p in self.players_ids:
             sum += p.wage
         if sum > self.salary_cap:
-            raise ValidationError("The salary cap is exceded")
+            raise ValidationError("The salary cap is exceeded.")

@@ -6,6 +6,7 @@
       <field name="arch" type="xml">
           <tree>
               <field name="name"/>
+              <field name="nationality"/>
               <field name="position" />
               <field name="value" />
               <field name="team" />
@@ -19,6 +20,9 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <div class="oe_avatar">
+                        <field name="image" widget="image"/>
+                    </div>
                     <group name="group_top">
                         <group name="group_left" string="Personal data">
                             <field name="name"/>
@@ -58,15 +62,17 @@
                                 Stats: 
                                 <field name="stats" /><br/>
                                 Minutes: 
-                                <field name="minutes" /><br/>
+                                <field name="minutes"/><br/>
                                 Goals: 
-                                <field name="goals" /><br/>
+                                <field name="goals"/><br/>
                                 Assists: 
-                                <field name="assists" /><br/>
-                                Played matches: 
-                                <field name="played_matches" /><br/>
+                                <field name="assists"/><br/>
+                                Played Matches: 
+                                <field name="played_matches"/><br/>
                                 Sanctions: 
-                                <field name="sanctions" />
+                                <field name="sanctions"/><br/>
+                                Goal Contributions per Match: 
+                                <field name="goal_contributions_per_match"/>
                             </div>
                         </page>
                     </notebook>
@@ -76,26 +82,31 @@
     </record>
 
     <record id="player_kanban" model="ir.ui.view">
-        <field name="name">laliga.player.kanban</field>
-        <field name="model">laliga.player</field>
-        <field name="arch" type="xml">
-            <kanban>
-                <templates>
-                    <t t-name="kanban-box">
-                        <div class="oe_kanban_card">
-                            <div class="oe_kanban_global_click">
+    <field name="name">laliga.player.kanban</field>
+    <field name="model">laliga.player</field>
+    <field name="arch" type="xml">
+        <kanban>
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_card">
+                        <div class="oe_kanban_global_click" style="display: flex; align-items: center;">
+                            <div style="margin-right: 10px;">
+                                <field name="image" widget="image" class="img-circle" style="width: 80px; height: 80px; object-fit: cover;"/>
+                            </div>
+                            <div style="overflow: hidden;">
                                 <strong><field name="name"/></strong>
                                 <div>Position: <field name="position"/></div>
                                 <div>Team: <field name="team"/></div>
                                 <div>Value: <field name="value" widget="monetary"/> €</div>
-                                <div>Wage: <field name="wage" widget="monetary"/> € monthly</div>
+                                <div>Wage: <field name="wage" widget="monetary"/> € yearly</div>
                             </div>
                         </div>
-                    </t>
-                </templates>
-            </kanban>
-        </field>
-    </record>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
 
     <record model="ir.actions.act_window" id="player_action_window">
         <field name="name">player</field>
