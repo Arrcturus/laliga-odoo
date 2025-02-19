@@ -18,8 +18,9 @@ class Staff(models.Model):
     email = fields.Char(string="Email")
     address = fields.Char(string="Address")
 
-    @api.constrains('employment_id')
+    @api.constrains('contract', 'employment_id')
     def _check_min_wage(self):
         for staff in self:
-            if staff.contract and any(contract.wage < staff.employment_id.min_wage for contract in staff.contract):
-                raise ValidationError(f"The wage for {staff.name} cannot be less than the minimum wage for the employment position {staff.employment_id.name}.")
+            if staff.contract and staff.employment_id:
+                if staff.contract.wage < staff.employment_id.min_wage:
+                    raise ValidationError(f"The wage for {staff.name} cannot be less than the minimum wage for the employment position {staff.employment_id.name}.")
